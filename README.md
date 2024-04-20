@@ -24,5 +24,8 @@ Your online bank password belongs to you and just you and not to untrustworthy t
 ### To Be Done
   - Dockerize the application
   - Add a basic frontend
+  - Accept JWT as request body
+  - Store the password in db in encrypted form
+
     
 
