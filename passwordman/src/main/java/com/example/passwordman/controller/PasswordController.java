@@ -30,9 +30,4 @@ public class PasswordController {
         return passwordService.getPasswordForWebsiteAndUserName(passwordGenerateRequest);
     }
 
-    @PostMapping("/save")
-    public String savePassword(@Valid @RequestBody PasswordGenerateRequest passwordGenerateRequest) {
-        log.info("Received request to save password for website: {}", passwordGenerateRequest.getWebsite());
-        return passwordService.generateAndStore(passwordGenerateRequest);
-    }
 }
