@@ -1,5 +1,5 @@
 # PasswordMan 
-Your online bank password belongs to you and just you and not to untrustworthy tools. Enter PasswordMan
+Your online bank password belongs to you and just you and not to untrustworthy tools. Enter PasswordMan!!! 
 
 ### Functionalities
 - Given a username and the application name it generates and stores a password into mysql db
@@ -21,4 +21,8 @@ Your online bank password belongs to you and just you and not to untrustworthy t
 ### APIs
   - /v1/passwordman/api/generate
   - /v1/passwordman/api/get
+### To Be Done
+  - Dockerize the application
+  - Add a basic frontend
+    
 
