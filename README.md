@@ -1,5 +1,5 @@
 # PasswordMan 
-Your online bank password belongs to you and just you. Not to the hot single moms living in your area. Enter PasswordMan
+Your online bank password belongs to you and just you. Not to tools which will gladly sell your data for a few thousand bucks. Enter PasswordMan
 
 ### Functionalities
 - Given a username and the application name it generates and stores a password into mysql db
