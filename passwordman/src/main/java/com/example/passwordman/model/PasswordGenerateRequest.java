@@ -11,10 +11,7 @@ import lombok.Getter;
 public class PasswordGenerateRequest {
     @NotBlank(message = "Website is mandatory")
     private String website;
-
-    @NotBlank(message = "Username is mandatory")
     private String username;
-
     private String password;
 
 

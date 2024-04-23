@@ -17,3 +17,7 @@ server:
   servlet:
     context-path: /v1/passwordman/api
   port: 8082
+
+rsa:
+  private-key: classpath:certs/private.pem
+  public-key: classpath:certs/public.pem

@@ -29,7 +29,7 @@ public class PasswordServiceImpl implements PasswordService {
     private static final String PASSWORD_CHARS = CAPS_CHARS + SMALL_CHARS + NUMBERS + SPECIAL_CHARS;
 
     @Override
-    public String generateAndStore(final PasswordGenerateRequest passwordGenerateRequest) {
+    public String generateAndStore(final PasswordGenerateRequest passwordGenerateRequest, String username) {
 
 
         String password = passwordGenerateRequest.getPassword();
@@ -39,7 +39,7 @@ public class PasswordServiceImpl implements PasswordService {
         }
 
         PasswordDetails passwordDetails = PasswordDetails.builder().
-                username(passwordGenerateRequest.getUsername()).
+                username(username).
                 website(passwordGenerateRequest.getWebsite()).
                 password(password).
                 build();

@@ -29,8 +29,8 @@ class PasswordServiceImplTest {
 
     @Test
     void generateAndStore() {
-        PasswordGenerateRequest passwordGenerateRequest = new PasswordGenerateRequest("testUser", "testWebsite");
-        assertNotNull(passwordService.generateAndStore(passwordGenerateRequest));
+        PasswordGenerateRequest passwordGenerateRequest = new PasswordGenerateRequest("testWebsite", null);
+        assertNotNull(passwordService.generateAndStore(passwordGenerateRequest, "testUser"));
     }
 
 

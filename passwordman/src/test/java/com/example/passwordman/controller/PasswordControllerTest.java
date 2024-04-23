@@ -2,6 +2,7 @@ package com.example.passwordman.controller;
 
 import com.example.passwordman.model.PasswordGenerateRequest;
 import com.example.passwordman.service.PasswordService;
+import java.security.Principal;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,9 +27,16 @@ class PasswordControllerTest {
 
     @Test
     void generatePassword() {
-        PasswordGenerateRequest passwordGenerateRequest = new PasswordGenerateRequest("testUser", "testWebsite");
-        when(passwordService.generateAndStore(passwordGenerateRequest)).thenReturn("samplePassword");
-        assertEquals("samplePassword", passwordController.generatePassword(passwordGenerateRequest));
+        PasswordGenerateRequest passwordGenerateRequest = new PasswordGenerateRequest("testWebsite", null);
+        when(passwordService.generateAndStore(passwordGenerateRequest, "testUser")).thenReturn("samplePassword");
+        Principal principal = new Principal() {
+            @Override
+            public String getName() {
+                return "testUser";
+            }
+        };
+
+        assertEquals("samplePassword", passwordController.generatePassword(passwordGenerateRequest, principal));
     }
 
     @Test
